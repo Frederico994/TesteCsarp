@@ -3,7 +3,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+builder.Services.AddHttpClient("RestCountries", c =>
+{
+    c.BaseAddress = new Uri("https://restcountries.com/");
+})
+
+.ConfigurePrimaryHttpMessageHandler(() =>
+
+{
+    return new HttpClientHandler
+    {
+        SslProtocols = System.Security.Authentication.SslProtocols.Tls12
+    };
+});
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
