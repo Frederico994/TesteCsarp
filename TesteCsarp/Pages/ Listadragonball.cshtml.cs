@@ -35,8 +35,8 @@ namespace TesteCsarp.Pages
             Personagens = dados.Select(d => new Personagem
             {
                 OfficialName = d.name?.name,
-                Id = d.id,
-                Image = d.image?.png
+                id = d.id,
+                image = d.image?.png
             }).ToList();
         }
     }
