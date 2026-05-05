@@ -6,16 +6,16 @@
 
 <p>Lista de personagens </p>
 
-@if (Model.Dragonball?.Count > 0)
+@if (Model.ListadragonballModel?.Count > 0)
 {
     <div style="display: flex; flex-wrap: wrap;">
-        @foreach (var pais in Model.Dragonball)
+        @foreach (var Listadragonball in Model.ListadragonballModel)
         {
             <div style="border: 1px solid #ccc; margin: 10px; padding: 10px; width: 200px;">
-                <img src="@pais.FlagUrl" alt="Bandeira de @pais.OfficialName" width="100" />
-                <p><strong>@pais.OfficialName</strong></p>
-                <p>Código: @pais.Cca2</p>
-                <p><a asp-page="/Infopais" asp-route-cod="@pais.Cca2">Ver Info</a></p>
+                <img src="@Listadragonball.image" alt="Personagem de @Listadragonball.OfficialName" width="100" />
+                <p><strong>@Listadragonball.OfficialName</strong></p>
+                <p>Código: @Listadragonball.OfficialName</p>
+                <p><a asp-page="/Listadragonball" asp-route-cod="@Listadragonball.OfficialName">Id= 1</a></p>
             </div>
         }
     </div>
