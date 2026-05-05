@@ -1,21 +1,21 @@
 ﻿@page
 @model ListadragonballModel
 @{
-    ViewData["Title"] = "Dragon Ball";
+    ViewData["Title"] = "Lista de Personagens de DragonBall";
 }
 
 <p>Lista de personagens </p>
 
-@if (Model.ListadragonballModel?.Count > 0)
+@if (Model.Personagens?.Count > 0)
 {
     <div style="display: flex; flex-wrap: wrap;">
-        @foreach (var Listadragonball in Model.ListadragonballModel)
+        @foreach (var Personagem in Model.Personagens)
         {
             <div style="border: 1px solid #ccc; margin: 10px; padding: 10px; width: 200px;">
-                <img src="@Listadragonball.image" alt="Personagem de @Listadragonball.OfficialName" width="100" />
-                <p><strong>@Listadragonball.OfficialName</strong></p>
-                <p>Código: @Listadragonball.OfficialName</p>
-                <p><a asp-page="/Listadragonball" asp-route-cod="@Listadragonball.OfficialName">Id= 1</a></p>
+                <img src="@Personagem.image" alt="Imagem de @Personagem.name" width="100" />
+                <p><strong>@Personagem.name</strong></p>
+                <p>Código: @Personagem.id</p>
+                <p><a asp-page="/InfoDragonBall" asp-route-cod="@Personagem.id">Ver Info</a></p>
             </div>
         }
     </div>

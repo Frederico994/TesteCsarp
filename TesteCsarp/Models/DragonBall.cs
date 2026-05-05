@@ -2,7 +2,7 @@ namespace TesteCsarp.Models
 
 {
 
-    public class Listadragonball
+    public class Personagem
 
     {
 
@@ -15,7 +15,7 @@ namespace TesteCsarp.Models
     }
 
 
-    public class ListadragonballApiResponse
+    public class InfoDragonBallApiResponse
 
     {
 

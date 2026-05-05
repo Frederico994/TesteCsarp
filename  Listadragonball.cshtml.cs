@@ -34,8 +34,8 @@ namespace TesteCsarp.Pages
             Listadragonball = dados.Select(d => new Listadragonball
             {
                 OfficialName = d.name?.official,
-                Cca2 = d.cca2,
-                FlagUrl = d.flags?.png
+                id = d.id,
+                Image = d.image
             }).ToList();
         }
     }
