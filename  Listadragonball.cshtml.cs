@@ -5,7 +5,7 @@ namespace TesteCsarp.Pages
 
 
 {
-    public class DragonBallModel : PageModel
+    public class  ListadragonballModel : PageModel
     {
         public void OnGet()
         {
