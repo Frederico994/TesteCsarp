@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TesteCsarp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55bf603f9f1245496334c08c6833b28164328276")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0a74f8d8ffc46066856637e677cb0c799431af8")]
 [assembly: System.Reflection.AssemblyProductAttribute("TesteCsarp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TesteCsarp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

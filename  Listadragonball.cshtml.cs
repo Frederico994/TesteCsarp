@@ -9,8 +9,7 @@ namespace TesteCsarp.Pages
     {
         public void OnGet()
         {
-            string dateTime = DateTime.Now.ToString("d", new CultureInfo("en-US"));
-            ViewData["TimeStamp"] = dateTime;
+            
         }
     }
 }

@@ -1,7 +1,26 @@
 ﻿@page
-@model TesteCsarp.Pages.ListadragonballModel
+@model ListadragonballModel
 @{
     ViewData["Title"] = "Dragon Ball";
 }
 
-<h1>Lista de Personagens</h1>
+<p>Lista de personagens </p>
+
+@if (Model.Dragonball?.Count > 0)
+{
+    <div style="display: flex; flex-wrap: wrap;">
+        @foreach (var pais in Model.Dragonball)
+        {
+            <div style="border: 1px solid #ccc; margin: 10px; padding: 10px; width: 200px;">
+                <img src="@pais.FlagUrl" alt="Bandeira de @pais.OfficialName" width="100" />
+                <p><strong>@pais.OfficialName</strong></p>
+                <p>Código: @pais.Cca2</p>
+                <p><a asp-page="/Infopais" asp-route-cod="@pais.Cca2">Ver Info</a></p>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>ERRO : não temos lista </p>
+}
