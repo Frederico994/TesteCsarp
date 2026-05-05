@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using TesteCsarp.Models;
 
 namespace TesteCsarp.Pages
 {
@@ -15,7 +16,7 @@ namespace TesteCsarp.Pages
         _httpClientFactory = httpClientFactory;
     }
 
-    public List<Listadragonball> Listadragonball { get; set; } = new();
+    public List<Personagem> Personagens { get; set; } = new();
     public async Task OnGetAsync()
 
     {
@@ -31,7 +32,7 @@ namespace TesteCsarp.Pages
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             var dados = JsonSerializer.Deserialize<List<CountryApiResponse>>(json, options);
 
-            Listadragonball = dados.Select(d => new Listadragonball
+            Personagens = dados.Select(d => new Personagem
             {
                 OfficialName = d.name?.name,
                 Id = d.id,
