@@ -9,7 +9,7 @@ namespace TesteCsarp.Pages
     {
     private readonly IHttpClientFactory _httpClientFactory;
 
-    public IndexModel(IHttpClientFactory httpClientFactory)
+    public ListadragonballModel(IHttpClientFactory httpClientFactory)
 
     {
         _httpClientFactory = httpClientFactory;
@@ -33,9 +33,9 @@ namespace TesteCsarp.Pages
 
             Listadragonball = dados.Select(d => new Listadragonball
             {
-                OfficialName = d.name?.official,
-                id = d.id,
-                Image = d.image
+                OfficialName = d.name?.name,
+                Id = d.id,
+                Image = d.image?.png
             }).ToList();
         }
     }
