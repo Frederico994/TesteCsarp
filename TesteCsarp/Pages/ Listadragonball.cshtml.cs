@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using TesteCsarp.Models;
+using System.Text.Json;
 
 namespace TesteCsarp.Pages
 {
@@ -32,12 +33,12 @@ namespace TesteCsarp.Pages
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             var dados = JsonSerializer.Deserialize<List<CountryApiResponse>>(json, options);
 
-            Personagens = dados.Select(d => new Personagem
+            Personagens = dados?.Select(d => new Personagem
             {
-                OfficialName = d.name?.name,
-                id = d.id,
-                image = d.image?.png
-            }).ToList();
+                OfficialName = d.name?.official ?? string.Empty,
+                id = 0,
+                image = d.flags?.png ?? string.Empty
+            }).ToList() ?? new();
         }
     }
 
