@@ -1,0 +1,32 @@
+﻿@page
+@model TesteCsarp.Pages.ListadragonballModel
+@{
+    ViewData["Title"] = "Lista de Personagens de DragonBall";
+}
+
+<h1>Lista de personagens de Dragon Ball</h1>
+
+@if (Model.Personagens?.Count > 0)
+{
+    <div class="row">
+        @foreach (var personagem in Model.Personagens)
+        {
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <a asp-page="/Infodragonball" asp-route-id="@personagem.Id">
+                        <img class="card-img-top" src="@personagem.Image" alt="Imagem de @personagem.Name" style="height:250px; object-fit:cover;" />
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">@personagem.Name</h5>
+                        <p class="card-text">@personagem.Affiliation</p>
+                        <a class="btn btn-primary" asp-page="/Infodragonball" asp-route-id="@personagem.Id">Ver Info</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>ERRO: não foi possível carregar a lista de personagens.</p>
+}

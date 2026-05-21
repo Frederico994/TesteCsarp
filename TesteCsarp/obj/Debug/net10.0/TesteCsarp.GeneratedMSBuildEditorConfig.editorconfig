@@ -22,10 +22,6 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/workspaces/TesteCsarp/TesteCsarp/Pages/ Listadragonball.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvIExpc3RhZHJhZ29uYmFsbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/workspaces/TesteCsarp/TesteCsarp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,8 +30,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/TesteCsarp/TesteCsarp/Pages/Infodragonball.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5mb2RyYWdvbmJhbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/TesteCsarp/TesteCsarp/Pages/Infopais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5mb3BhaXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspaces/TesteCsarp/TesteCsarp/Pages/Listadragonball.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGlzdGFkcmFnb25iYWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/workspaces/TesteCsarp/TesteCsarp/Pages/Privacy.cshtml]

@@ -6,11 +6,20 @@ builder.Services.AddRazorPages();
 builder.Services.AddHttpClient("RestCountries", c =>
 {
     c.BaseAddress = new Uri("https://restcountries.com/");
-    
 })
-
 .ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler
+    {
+        SslProtocols = System.Security.Authentication.SslProtocols.Tls12
+    };
+});
 
+builder.Services.AddHttpClient("DragonBallApi", c =>
+{
+    c.BaseAddress = new Uri("https://dragonball-api.com/");
+})
+.ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
     {

@@ -1,57 +1,20 @@
 namespace TesteCsarp.Models
-
 {
-
-    public class Personagem
-
+    public class DragonBallCharacter
     {
-
-        public int id  { get; set; }
-
-        public string OfficialName { get; set; }
-
-        public string image { get; set; }
-
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Image { get; set; } = string.Empty;
+        public string Affiliation { get; set; } = string.Empty;
     }
 
-
-    public class InfoDragonBallApiResponse
-
+    public class DragonBallCharacterDetail : DragonBallCharacter
     {
-
-        public int id { get; set; }
-
-        public string OfficialName { get; set; }
-
-        public string image { get; set; }
-
     }
 
-
-    public class OfficialName
-
+    public class DragonBallCharactersResponse
     {
-
-        public string name { get; set; }
-
+        public List<DragonBallCharacter>? Items { get; set; }
     }
-
-    public class Id
-
-    {
-
-        public string id { get; set; }
-
-    }
-
-
-    public class Image
-
-    {
-
-        public string image { get; set; }
-
-    }
-
-
 }
